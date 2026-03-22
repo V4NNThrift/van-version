@@ -1,35 +1,21 @@
--- Main.lua
--- This file integrates Brainrot AutoFarm features with WindUI library.
+-- Brainrot AutoFarm V4 Code with WindUI Integration
+-- Add your code here
+-- Example of how the GUI might be setup with WindUI integration
 
--- AutoFarm features
-function AutoFarm()
-    -- Code for AutoFarm functionality
-end
+local Gui = require('WindUI')
 
-function AutoCollect()
-    -- Code for AutoCollect functionality
-end
+local MainFrame = Gui:CreateFrame('AutoFarm V4', 400, 300)
 
-function AutoUpgrade()
-    -- Code for AutoUpgrade functionality
-end
+local StartButton = Gui:CreateButton('Start', 50, 200)
+StartButton.MouseButton1Click:Connect(function()
+    print('AutoFarm Started!')
+    -- Add your farming logic here
+end)
 
-function InstantInteract()
-    -- Code for instant interaction feature
-end
+local StopButton = Gui:CreateButton('Stop', 200, 200)
+StopButton.MouseButton1Click:Connect(function()
+    print('AutoFarm Stopped!')
+    -- Logic to stop farming
+end)
 
-function Teleport()
-    -- Code for teleport feature
-end
-
-function Configuration()
-    -- Configuration settings
-end
-
--- Initialize features
-AutoFarm()
-AutoCollect()
-AutoUpgrade()
-InstantInteract()
-Teleport()
-Configuration()
+MainFrame:Show()
